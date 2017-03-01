@@ -1,6 +1,9 @@
 # Hyperactive-Record
 Hyperactive Record is a ligthweight version of Active Record. It abstracts away good old fashioned SQL queries into a simple and developer-friendly set of methods for querying by columns names and for creating associations between different database tables.
 
+## Test Driving
+You can take Hyperactive Record on a spin by cloning this repo, opening up a fresh pry/irb session and requiring the './demo.rb' file. At this point you can query tables to your heart's content.
+
 ## Defining getter and setter methods
 New classes inheriting from SQLObject use the `finalize!` method to iterate through the classes's table's columns and then...wait for it...employ *metaprogramming* to define getter and setter methods for the columns on the fly. It's all extremely clever and compact. To wit:
 
