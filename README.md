@@ -1,5 +1,5 @@
 # Hyperactive-Record
-Hyperactive Record is a ligthweight version of Active Record. It abstracts away good old fashioned SQL queries into a simple and developer-friendly set of methods for querying by columns names and for creating associations between different database tables.
+Hyperactive Record is a ligthweight version of Active Record. It abstracts away good old fashioned SQL queries into a marvelously simple set of methods for querying by columns names, updating records, and creating associations between different database tables.
 
 ## Test Driving
 You can take Hyperactive Record on a spin by cloning this repo, opening up a fresh pry/irb session and requiring the './demo.rb' file. At this point you can query tables to your heart's content.
