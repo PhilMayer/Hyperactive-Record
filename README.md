@@ -35,7 +35,9 @@ module Searchable
     SQL
 ```
 
-As you might be able to glean from the above SQL query, `where` returns an array of new objects that are simply the rows that fulfill the search terms of the query.
+As you might be able to glean from the above SQL query, `where` returns an array of new objects that are simply the rows that fulfill the search terms of the query. 
 
 ## The Associatable module
-Hyperactive similarly extends Associatable, making available the indispensable `belongs_to` and `has_many methods` for leaping gracefully between database tables. These methods also `define_method`s for the association of your choosing. They then use default values for foreign keys, primary keys and class names based on the given association name. That is, unless values are given for `primary key`, `foreign key` or `class_name`, at which point the defaults are overridden like a bad lunch suggestion.
+Hyperactive similarly extends Associatable, making available the indispensable `belongs_to` and `has_many methods` for leaping gracefully between database tables. For instance, if you have one table containing information about human rights abuses, and another table containing information about certain countries, you could access all the human rights abuses of North Korea (`has_many`), or determine which country a human rights abuse belongs to.
+
+These methods also `define_method`s for the association of your choosing. They then use default values for foreign keys, primary keys and class names based on the given association name. That is, unless values are given for `primary key`, `foreign key` or `class_name`, at which point the defaults are overridden like a bad lunch suggestion.
