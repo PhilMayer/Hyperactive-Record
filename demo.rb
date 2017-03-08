@@ -1,14 +1,14 @@
 require_relative 'hyperactive.rb'
 DBConnection::reset
 
-class Human < SQLObject
+class Human < Hyperactive
   has_many :cats,
     foreign_key: :owner_id
 
   belongs_to :house
 end
 
-class Cat < SQLObject
+class Cat < Hyperactive
   belongs_to :owner,
     foreign_key: :owner_id,
     class_name: "Human"
@@ -16,7 +16,7 @@ class Cat < SQLObject
   has_one_through :house, :owner, :house
 end
 
-class House < SQLObject
+class House < Hyperactive
   has_many :humans,
     foreign_key: :house_id,
     class_name: "Human"

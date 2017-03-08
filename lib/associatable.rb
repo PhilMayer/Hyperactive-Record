@@ -1,4 +1,4 @@
-require_relative '02_searchable'
+require_relative 'searchable'
 require 'active_support/inflector'
 require 'byebug'
 
@@ -63,6 +63,6 @@ module Associatable
   end
 end
 
-class SQLObject
+class Hyperactive
   extend Associatable
 end

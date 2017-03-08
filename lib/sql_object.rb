@@ -1,7 +1,7 @@
 require_relative 'db_connection'
 require 'active_support/inflector'
 
-class SQLObject
+class Hyperactive
   def self.columns
     @columns || query_for_column_names = DBConnection.execute2(<<-SQL)
       SELECT
