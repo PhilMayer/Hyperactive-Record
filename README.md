@@ -2,7 +2,7 @@
 Hyperactive Record is a lightweight version of Active Record. It abstracts away SQL queries into a marvelously simple set of methods for querying by columns names, updating records, and creating associations between different database tables.
 
 ## Test Driving
-You can take Hyperactive Record on a spin by cloning this repo, opening up a fresh pry session and requiring the './demo.rb' file. At this point you can query tables to your heart's content.
+You can take Hyperactive Record on a spin by cloning this repo, opening up a fresh pry session and requiring the './demo.rb' file. The provided tables for cats, humans and houses can be queried like you would using good old active record: `Human.all` will give you all humans, `Human.all.last` will give you the last human in the database, and `Human.all.last.cat` will give you the last human's cat.
 
 ## Defining getter and setter methods
 New classes inheriting from Hyperactive use the `finalize!` method to iterate through the classes's table's columns, defining getter and setter methods for the columns on the fly. To wit:
@@ -40,4 +40,4 @@ As you might be able to glean from the above SQL query, `where` returns an array
 ## The Associatable module
 Hyperactive similarly extends Associatable, making available the indispensable `belongs_to` and `has_many methods` for leaping gracefully between database tables. For instance, if you have one table containing information about human rights abuses, and another table containing information about certain countries, you could access all the human rights abuses of North Korea (`has_many`), or determine which country a human rights abuse belongs to.
 
-These methods also `define_method`s for the association of your choosing. They then use default values for foreign keys, primary keys and class names based on the given association name. That is, unless values are given for `primary key`, `foreign key` or `class_name`, in which case the defaults can be overridden. 
+These methods also `define_method`s for the association of your choosing. They then use default values for foreign keys, primary keys and class names based on the given association name. That is, unless values are given for `primary key`, `foreign key` or `class_name`, in which case the defaults can be overridden.
